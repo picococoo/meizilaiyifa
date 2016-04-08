@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block load_music %}
+{#
+{{ script('js/audioplayer.min.js') }}
+<div class="audioplayer audioplayer-stopped" id="music-player">
+    <audio src="http://s4pykrzpu751e76.qiniudn.com/Linkin%20Park%20-%20Valentines%20Day(Piano%20Version).mp3" preload="auto" controls loop></audio>
+</div>
+#}
+{% endblock %} 
+
+{% block load_pic %}
+{{ script('js/func.min.js') }}
+<script>
+var to_load_page = 0;
+$(function() {
+    loadMore(to_load_page);
+});
+$(window).scroll(function(){
+  // 当滚动到最底部以上300像素时， 加载新内容
+  //已经可以成功加载，不过加载条件似乎有问题。
+    if ($(document).height() - $(this).scrollTop() - $(this).height()<100){
+        console.log($(document).height());
+        console.log($(this).scrollTop());
+        console.log($(this).height());
+        console.log("该加载了,当前第 "+to_load_page+" 次加载。");
+        to_load_page++;
+        loadMore(to_load_page);
+    }
+});
+</script>
+{% endblock %} 
+
+{% block page_content %}
+{% endblock %}

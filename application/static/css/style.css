@@ -1,0 +1,85 @@
+body {
+    color: #333333;
+    background-color: #eeeeee;
+}
+a:hover {
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+footer a {
+    color: #c70850;
+}
+footer a:hover, a:focus {
+    color: #7d0532;
+}
+.navbar {
+    border: 0;
+}
+.main {
+    min-height: 400px;
+}
+.footer {
+    border-top: 1px solid #dededc;
+    padding: 10px 0 20px 0;
+    margin: 0 0 20px 0;
+}
+.footer .footer-link {
+    margin-left: 20px;
+}
+.box {
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition-duration: 0.5s;
+}
+.box .meta {
+    padding: 18px 30px;
+    text-align: center;
+}
+.box img {
+    max-width: 100%;
+}
+.box:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.5s;
+}
+@media not handheld {
+    .flip-box img,.flip-box img:hover {
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: .4s;
+        -moz-animation-duration: .4s;
+        -ms-animation-duration: .4s;
+        -o-animation-duration: .4s;
+        animation-duration: .4s
+    }
+}
+@-webkit-keyframes pulse{0%{-webkit-transform:scale(1)}100%{-webkit-transform:scale(1.1)}}
+@-moz-keyframes pulse{0%{-moz-transform:scale(1)}100%{-moz-transform:scale(1.1)}}
+@-o-keyframes pulse{0%{-o-transform:scale(1)}100%{-o-transform:scale(1.1)}}
+@keyframes pulse{0%{transform:scale(1)}100%{transform:scale(1.1)}}
+@media not handheld {
+    .flip-box img:hover {
+        -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -o-animation-name: pulse;
+        animation-name: pulse
+    }
+}
+.show-box {
+    position: relative;
+}
+.box-btns {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+#music-player {
+    position: fixed;
+    z-index: 999999;
+    bottom: 40px;
+    right: 20px;
+}

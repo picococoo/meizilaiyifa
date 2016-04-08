@@ -1,0 +1,22 @@
+{% extends "error.html" %}
+
+{% block error_code %}
+404
+{% endblock %}
+
+{% block error_css %}
+{{ link('css/404.css') }}
+{% endblock %}
+
+{% block body %}
+<div id="error">
+  <a href="http://meizilaiyifa.sinaapp.com/">
+    <img src="{{ static('img/404.png') }}" alt="404 page not found" id="error404-image" />
+  </a>
+</div>
+
+<div class="error_message">
+   <h2>404错误</h2>
+   <p>抱歉，找不到你要的页面呀！</p>
+</div>
+{% endblock %}

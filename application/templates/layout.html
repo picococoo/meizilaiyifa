@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang=zh-cmn-Hans>
+
+<head>
+    <meta charset='utf-8'>
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    -->
+    <title>妹子来一发</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    {{ link('css/style.min.css') }}
+    <link rel="shortcut icon" type="image/png" href="{{ static('img/favicon.ico') }}">
+    {% block duoshuo_head_js %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand" href="/">妹子来一发</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">反馈意见</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container main">
+        <div class="row" id="to_load">
+            {% block page_content %}{% endblock %}
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="pull-left">
+                    <small class="glyphicon glyphicon-heart text-muted"></small>
+                    <small class="text-muted ">&nbsp;made by&nbsp;</small>
+                    <a href="#" target="_blank">
+                        <small>poision</small>
+                    </a>
+                </div>
+                <div class="pull-right">
+                    <a class="footer-link" href="#">
+                        <small>关于</small>
+                    </a>
+                    <a class="footer-link" href="/pin">
+                        <small>投递</small>
+                    </a>
+                    <a class="footer-link" href="http://sae.sina.com.cn/">
+                        <small>@SAE</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    {{ script('js/jquery.goup.min.js') }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var offset = window.screen.width>=1024?200:40;
+            var offset = 40;
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: offset,
+                title: '回到顶部',
+                titleAsText: true
+            });
+
+        });
+    </script>
+    {% block load_music %}{% endblock %}
+    {% block load_pic %}{% endblock %}
+    {% block duoshuo_js %}{% endblock %}
+    <!--
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8192ca8ac31e30dede2d8f22bfdab09b' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    -->
+</body>
+
+</html>

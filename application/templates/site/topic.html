@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{#
+{% block duoshuo_head_js %}
+<script>var duoshuoQuery = {short_name:"meizilaiyifa"};</script>
+<script src="http://static.duoshuo.com/embed.js"></script>
+{% endblock%}
+#}
+
+{% block load_pic %}
+{{ script('js/func.js') }}
+<script>
+$(function() {
+    loadDetail('{{ topic_id }}');
+});
+</script>
+{% endblock %} 
+
+{#
+{% block duoshuo_js %}
+<script>
+function toggleDuoshuoComments(container){
+    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+    el.setAttribute('data-thread-key', '{{ topic_id }}');//必选参数
+    el.setAttribute('data-url', '{{ url_for('topic({{ topic_id }})') }}');//必选参数
+    el.setAttribute('data-author-key', '作者的本地用户ID');//可选参数
+    DUOSHUO.EmbedThread(el);
+    jQuery(container).append(el);
+}
+</script>
+{% endblock%}
+#}

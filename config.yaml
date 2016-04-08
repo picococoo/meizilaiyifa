@@ -1,0 +1,10 @@
+name: meizilaiyifa
+
+version: 1
+
+handlers:
+- url: /static/
+  static_path: /application/static
+
+- url: /static/
+  gzip: on

@@ -1,0 +1,22 @@
+{% extends "error.html" %}
+
+{% block error_code %}
+403
+{% endblock %}
+
+{% block error_css %}
+{{ link('css/404.css') }}
+{% endblock %}
+
+{% block body %}
+<div id="error">
+  <a href="http://meizilaiyifa.sinaapp.com/">
+    <img src="{{ static('img/404.png') }}" alt="404 page not found" id="error404-image" />
+  </a>
+</div>
+
+<div class="error_message">
+   <h2>403错误</h2>
+   <p>抱歉，你的权限不够哦！</p>
+</div>
+{% endblock %}

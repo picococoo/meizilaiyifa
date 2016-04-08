@@ -1,0 +1,15 @@
+body {
+    background-color: #daecee;
+}
+
+#error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -303px;
+    margin-left: -303px;
+}
+
+.error_message {
+	text-align: center;
+}
